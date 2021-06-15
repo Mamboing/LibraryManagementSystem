@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
     <color name="whiteSmoke">#F5F5F5</color>
-    <color name="light_blue_600">#FF039BE5</color>
-    <color name="light_blue_900">#FF01579B</color>
-    <color name="light_blue_A200">#FF40C4FF</color>
-    <color name="light_blue_A400">#FF00B0FF</color>
-    <color name="black_overlay">#66000000</color>
     <color name="transparent">#00000000</color><!--透明色 -->
     <color name="half_transparent">#80000000</color><!--半透明色 -->
     <color name="ivory">#fffff0</color><!--象牙色 -->
@@ -68,7 +56,6 @@
     <color name="lightcyan">#e0ffff</color><!--亮青色 -->
     <color name="burlywood">#deb887</color><!--实木色 -->
     <color name="plum">#dda0dd</color><!--洋李色 -->
-    <color name="gainsboro">#dcdcdc</color><!--淡灰色 -->
     <color name="crimson">#dc143c</color><!--暗深红色 -->
     <color name="palevioletred">#db7093</color><!--苍紫罗兰色 -->
     <color name="goldenrod">#daa520</color><!--金麒麟色 -->
@@ -108,7 +95,6 @@
     <color name="blueviolet">#8a2be2</color><!--紫罗兰蓝色 -->
     <color name="lightskyblue">#87cefa</color><!--亮天蓝色 -->
     <color name="skyblue">#87ceeb</color><!--天蓝色 -->
-    <color name="gray">#808080</color><!--灰色 -->
     <color name="grey">#808080</color><!--灰色 -->
     <color name="olive">#808000</color><!--橄榄色 -->
     <color name="purple">#800080</color><!--紫色 -->
@@ -153,10 +139,28 @@
     <color name="deepskyblue">#00bfff</color><!--深天蓝色 -->
     <color name="darkcyan">#008b8b</color><!--暗青色 -->
     <color name="teal">#008080</color><!--水鸭色 -->
-    <color name="green">#008000</color><!--绿色 -->
     <color name="darkgreen">#006400</color><!--暗绿色 -->
-    <color name="blue">#0000ff</color><!--蓝色 -->
     <color name="mediumblue">#0000cd</color><!--中兰色 -->
     <color name="darkblue">#00008b</color><!--暗蓝色 -->
     <color name="navy">#000080</color><!--海军色 -->
+    <color name="primary">#178A75</color>
+    <color name="colorPrimaryVariant">@color/white</color>
+    <color name="gainsboro">#c3c3c3</color>
+    <color name="default_tab">#f5f5f5</color>
+    <color name="gray">@android:color/darker_gray</color>
+    <color name="lightGray">#bbbbbb</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">@color/purple_700</color>
+    <color name="green">@color/teal_200</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
 </resources>

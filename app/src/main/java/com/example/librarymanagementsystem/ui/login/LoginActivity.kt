@@ -1,6 +1,7 @@
 package com.example.librarymanagementsystem.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -12,6 +13,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
+import com.example.librarymanagementsystem.MainActivity
 import com.example.librarymanagementsystem.databinding.ActivityLoginBinding
 
 import com.example.librarymanagementsystem.R
@@ -63,6 +65,9 @@ class LoginActivity : AppCompatActivity() {
 
             //Complete and destroy login activity once successful
             finish()
+
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         })
 
         username.afterTextChanged {

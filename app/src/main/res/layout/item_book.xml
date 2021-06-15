@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+        <variable
+            name="model"
+            type="com.example.librarymanagementsystem.data.model.Book" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/book_card"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:cardCornerRadius="25dp">
+
+            <ImageView
+                android:id="@+id/book_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/diamond"
+                tools:src="@drawable/diamond" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{model.name}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/book_card"
+            tools:text="ALLEN"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lend_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:id="@+id/lend_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:paddingHorizontal="5dp"
+                android:text="已借阅"
+                tools:text="已借阅" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{model.author}"
+            app:layout_constraintStart_toEndOf="@id/book_card"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            tools:text="作者" />
+
+        <TextView
+            android:id="@+id/summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="55dp"
+            android:text="@{model.summary}"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/author"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="主要介绍了。。。"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
