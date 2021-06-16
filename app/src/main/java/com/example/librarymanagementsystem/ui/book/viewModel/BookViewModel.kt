@@ -37,33 +37,31 @@ class BookViewModel : ViewModel() {
 
     fun searchBook(condition: String?) {
         val address: String = HttpUtil.LocalAddress + "/search"
-        mBooks.postValue(listOf(
-            Book(
-                222, "c", "John", "a", "123",
-                "AmyP", "2020-11-02", "1111", true, "213121", "A", "1231321"
-            ),
-
-            Book(
-                223, "c", "John", "a", "123",
-                "AmyP", "2020-11-02", "1111", true, "213121", "A", "1231321"
-            )
-        ))
-
-//        HttpUtil.getHttp(address, object : Callback {
-//            override fun onFailure(call: Call, e: IOException) {
-//                e.printStackTrace()
-//                mMessage.postValue("获取精选商品失败，建议检查网络")
-//            }
+//        mBooks.postValue(listOf(
+//            Book(
+//                222, "c", "John", "a", "123",
+//                "AmyP", "2020-11-02", "1111", true, "213121", "A", "1231321"
+//            ),
 //
-//            override fun onResponse(call: Call, response: Response) {
-//                val responseData: String = response.body?.string()!!
-//                LogUtil.e("HomeViewModel", responseData)
-//                if (Utility.checkResponse(responseData, address)) {
-//                    val books: List<Book> = Utility.handleBookList(responseData)
-//                    mBooks.postValue(books)
-//                }
-//            }
-//        })
+//            Book(
+//                223, "c", "John", "a", "123",
+//                "AmyP", "2020-11-02", "1111", true, "213121", "A", "1231321"
+//            )
+//        ))
+
+        HttpUtil.getHttp(address, object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                e.printStackTrace()
+                mMessage.postValue("获取数据失败，建议检查网络")
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                val responseData: String = response.body?.string()!!
+                LogUtil.e("HomeViewModel", responseData)
+                val books: List<Book> = Utility.handleBookList(responseData)
+                mBooks.postValue(books)
+            }
+        })
     }
 
 

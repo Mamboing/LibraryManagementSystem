@@ -94,7 +94,8 @@
                     android:textSize="13sp"
                     android:padding="16dp"
                     android:text="@={viewModel.MSearchCondition}"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:longClickable="true"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler"

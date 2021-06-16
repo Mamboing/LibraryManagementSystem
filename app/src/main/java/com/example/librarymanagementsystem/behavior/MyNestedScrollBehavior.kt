@@ -32,13 +32,8 @@ class MyNestedScrollBehavior(
     ): Boolean {
         val lp: CoordinatorLayout.LayoutParams =
             child.layoutParams as CoordinatorLayout.LayoutParams
-//        if (first) {
-//            preTopMargin = lp.topMargin;
-//            first = !first;
-//        }
         lp.topMargin = preTopMargin + dependency.top
         child.layoutParams = lp
-        LogUtil.e("myNestedScrollView", dependency.top.toString() + " ")
         return super.onDependentViewChanged(parent, child, dependency)
     }
 }
