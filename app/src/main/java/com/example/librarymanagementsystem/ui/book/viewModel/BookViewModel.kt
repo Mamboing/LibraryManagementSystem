@@ -17,9 +17,17 @@ import java.io.IOException
 class BookViewModel : ViewModel() {
     private val mMessage = MutableLiveData<String>()
     val mSearchType = MutableLiveData<SearchType>()
-    val mSearchCondition = MutableLiveData<String>()
+    private val mSearchCondition = MutableLiveData<String>()
     private val mPref = MutableLiveData<SharedPreferences>()
     private val mBooks = MutableLiveData<List<Book>>()
+
+    fun getMSearchCondition(): LiveData<String> = mSearchCondition
+
+    fun getSearchCondition() = mSearchCondition.value
+
+    fun setSearchCondition(condition: String) {
+        mSearchCondition.value = condition
+    }
 
     fun getMessage(): LiveData<String> = mMessage
 
@@ -36,7 +44,18 @@ class BookViewModel : ViewModel() {
     fun getBooks(): LiveData<List<Book>> = mBooks
 
     fun searchBook(condition: String?) {
-        val address: String = HttpUtil.LocalAddress + "/search"
+        val typeString = if (condition == null || mSearchType.value == null) {
+            ""
+        } else if (mSearchType.value == SearchType.TAG){
+            "?tag=$condition"
+        } else {
+            "?name=$condition"
+        }
+
+        val address: String = HttpUtil.LocalAddress + "/search" + typeString
+
+        LogUtil.e("BookViewModel", address)
+
 //        mBooks.postValue(listOf(
 //            Book(
 //                222, "c", "John", "a", "123",

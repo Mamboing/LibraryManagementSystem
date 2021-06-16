@@ -70,7 +70,6 @@
             android:id="@+id/nested_scroll_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="490dp"
             app:layout_behavior=".behavior.MyNestedScrollBehavior">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -93,16 +92,27 @@
                     android:textColorHint="#989898"
                     android:textSize="13sp"
                     android:padding="16dp"
-                    android:text="@={viewModel.MSearchCondition}"
-                    android:singleLine="true"
-                    android:longClickable="true"/>
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple_200"
+                    android:text="点击这里切换搜索方式"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/search_edittext"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/search_edittext"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                    app:layout_constraintTop_toBottomOf="@id/text"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_book" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

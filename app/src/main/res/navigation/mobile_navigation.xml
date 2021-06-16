@@ -12,11 +12,11 @@
         tools:layout="@layout/fragment_book">
     </fragment>
 
-    <fragment
-        android:id="@+id/navigation_me"
-        android:name="com.example.librarymanagementsystem.ui.book.BookFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_book">
-    </fragment>
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_me"-->
+<!--        android:name="com.example.librarymanagementsystem.ui.book.BookFragment"-->
+<!--        android:label="@string/title_home"-->
+<!--        tools:layout="@layout/fragment_book">-->
+<!--    </fragment>-->
 
 </navigation>
