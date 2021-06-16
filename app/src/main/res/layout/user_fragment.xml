@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:id="@+id/ll_portrait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        android:background="@color/transparent">
+
+        <com.example.librarymanagementsystem.ui.user.view.RoundImageView
+            android:id="@+id/ri_portrait"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ecnu_badge"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户信息"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            android:layout_gravity="center"
+            android:paddingLeft="15dp"/>
+
+    </LinearLayout>
+    <com.example.librarymanagementsystem.ui.user.view.ItemGroup
+        android:id="@+id/user_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:paddingLeft="15dp"
+        app:title="ID号"
+        app:edt_content="10156077"
+        app:jt_visible="false" />
+
+    <com.example.librarymanagementsystem.ui.user.view.ItemGroup
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:paddingLeft="15dp"
+        app:title="用户名"
+        app:edt_content="Jane"
+        app:jt_visible="false" />
+
+    <com.example.librarymanagementsystem.ui.user.view.ItemGroup
+        android:id="@+id/user_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:paddingLeft="15dp"
+        app:title="身份组"
+        app:edt_content="Administrator"
+        app:jt_visible="false" />
+
+    <com.example.librarymanagementsystem.ui.user.view.ItemGroup
+        android:id="@+id/user_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:paddingLeft="15dp"
+        app:title="借阅记录" />
+
+</LinearLayout>
