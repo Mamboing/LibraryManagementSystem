@@ -2,7 +2,7 @@
 <resources>
     <color name="whiteSmoke">#F5F5F5</color>
     <color name="transparent">#00000000</color><!--透明色 -->
-    <color name="half_transparent">#80000000</color><!--半透明色 -->
+    <color name="half_transparent">#1AFFFFFF</color><!--半透明色 -->
     <color name="ivory">#fffff0</color><!--象牙色 -->
     <color name="lightyellow">#ffffe0</color><!--亮黄色 -->
     <color name="yellow">#ffff00</color><!--黄色 -->

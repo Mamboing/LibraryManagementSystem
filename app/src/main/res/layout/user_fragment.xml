@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/transparent">
+    android:background="@drawable/bg" >
 
     <LinearLayout
         android:id="@+id/ll_portrait"
@@ -21,7 +21,7 @@
             android:layout_height="60dp"
             android:layout_marginLeft="15dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/ecnu_badge"/>
+            android:src="@drawable/avatar"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,7 +40,12 @@
         android:layout_height="wrap_content"
         app:paddingLeft="15dp"
         app:title="ID号"
-        app:jt_visible="false" />
+        android:textStyle="bold"
+        app:edt_content="10185101265"
+        app:jt_visible="false"
+        android:background="@color/half_transparent"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"/>
 
     <com.example.librarymanagementsystem.ui.user.view.ItemGroup
         android:id="@+id/user_name"
@@ -48,8 +53,26 @@
         android:layout_height="wrap_content"
         app:paddingLeft="15dp"
         app:title="用户名"
-        app:edt_content="Jane Doe"
-        app:jt_visible="false" />
+        android:textStyle="bold"
+        app:edt_content="XZY"
+        app:jt_visible="false"
+        android:background="@color/half_transparent"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground" />
+
+    <com.example.librarymanagementsystem.ui.user.view.ItemGroup
+        android:id="@+id/user_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:paddingLeft="15dp"
+        app:title="昵称"
+        app:isEditable="true"
+        android:textStyle="bold"
+        app:edt_hint_content="编辑昵称"
+        app:jt_visible="false"
+        android:background="@color/half_transparent"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground" />
 
     <com.example.librarymanagementsystem.ui.user.view.ItemGroup
         android:id="@+id/user_type"
@@ -57,14 +80,22 @@
         android:layout_height="wrap_content"
         app:paddingLeft="15dp"
         app:title="身份组"
+        android:textStyle="bold"
         app:edt_content="Administrator"
-        app:jt_visible="false" />
+        app:jt_visible="false"
+        android:background="@color/half_transparent"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground" />
 
     <com.example.librarymanagementsystem.ui.user.view.ItemGroup
         android:id="@+id/user_record"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:paddingLeft="15dp"
-        app:title="借阅记录" />
+        app:title="借阅记录"
+        android:textStyle="bold"
+        android:background="@color/half_transparent"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground" />
 
 </LinearLayout>

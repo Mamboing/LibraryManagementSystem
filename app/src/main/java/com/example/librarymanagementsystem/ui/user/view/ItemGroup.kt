@@ -54,7 +54,7 @@ class ItemGroup : FrameLayout {
         //标题的默认字体颜色
         val defaultTitleColor = context.resources.getColor(R.color.firebrick, null)
         //输入框的默认字体颜色
-        val defaultEdtColor = context.resources.getColor(R.color.light_blue_A400, null)
+        val defaultEdtColor = context.resources.getColor(R.color.whitesmoke, null)
         //输入框的默认的提示内容的字体颜色
         val defaultHintColor = context.resources.getColor(R.color.grey, null)
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ItemGroup)
