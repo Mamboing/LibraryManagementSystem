@@ -5,7 +5,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 
 object HttpUtil {
-    const val LocalAddress = "http://192.168.43.111"
+    const val LocalAddress = "http://155.94.228.62:49373"
 
     fun getHttp(address: String, callback: Callback) {
         val client = OkHttpClient()

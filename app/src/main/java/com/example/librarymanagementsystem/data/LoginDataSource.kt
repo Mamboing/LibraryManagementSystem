@@ -24,7 +24,7 @@ class LoginDataSource {
             }
 
             override fun onResponse(call: Call, response: Response) {
-                val responseData = JSONArray(response).toString()
+                val responseData = response.body?.string()!!
                 LogUtil.d("LoginResponse", responseData)
             }
         })
