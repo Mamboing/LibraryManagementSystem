@@ -39,26 +39,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:paddingLeft="15dp"
-        app:title="ID号"
+        app:title="用户ID"
         android:textStyle="bold"
         app:edt_content="10185101265"
         app:jt_visible="false"
         android:background="@color/half_transparent"
         android:clickable="true"
         android:foreground="?attr/selectableItemBackground"/>
-
-    <com.example.librarymanagementsystem.ui.user.view.ItemGroup
-        android:id="@+id/user_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:paddingLeft="15dp"
-        app:title="用户名"
-        android:textStyle="bold"
-        app:edt_content="XZY"
-        app:jt_visible="false"
-        android:background="@color/half_transparent"
-        android:clickable="true"
-        android:foreground="?attr/selectableItemBackground" />
 
     <com.example.librarymanagementsystem.ui.user.view.ItemGroup
         android:id="@+id/user_nickname"
