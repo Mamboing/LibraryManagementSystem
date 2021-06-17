@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.AttrRes
 import com.example.librarymanagementsystem.R
+import com.example.librarymanagementsystem.ui.user.UserFragment
 
 
 class ItemGroup : FrameLayout {
@@ -52,11 +53,11 @@ class ItemGroup : FrameLayout {
      */
     private fun initAttrs(context: Context, attrs: AttributeSet?) {
         //标题的默认字体颜色
-        val defaultTitleColor = context.resources.getColor(R.color.grey)
+        val defaultTitleColor = context.resources.getColor(R.color.firebrick, null)
         //输入框的默认字体颜色
-        val defaultEdtColor = context.resources.getColor(R.color.black)
+        val defaultEdtColor = context.resources.getColor(R.color.light_blue_A400, null)
         //输入框的默认的提示内容的字体颜色
-        val defaultHintColor = context.resources.getColor(R.color.grey)
+        val defaultHintColor = context.resources.getColor(R.color.grey, null)
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ItemGroup)
         val title = typedArray.getString(R.styleable.ItemGroup_title)
         val paddingLeft = typedArray.getDimension(R.styleable.ItemGroup_paddingLeft, 15f)
@@ -66,7 +67,7 @@ class ItemGroup : FrameLayout {
         val titleSize = typedArray.getDimension(R.styleable.ItemGroup_title_size, 15f)
         val titleColor = typedArray.getColor(R.styleable.ItemGroup_title_color, defaultTitleColor)
         val content = typedArray.getString(R.styleable.ItemGroup_edt_content)
-        val contentSize = typedArray.getDimension(R.styleable.ItemGroup_edt_text_size, 13f)
+        val contentSize = typedArray.getDimension(R.styleable.ItemGroup_edt_text_size, 15f)
         val contentColor =
             typedArray.getColor(R.styleable.ItemGroup_edt_text_color, defaultEdtColor)
         val hintContent = typedArray.getString(R.styleable.ItemGroup_edt_hint_content)
