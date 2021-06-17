@@ -50,6 +50,7 @@
         app:title="用户名"
         app:edt_content="Jane Doe"
         app:jt_visible="false" />
+
     <com.example.librarymanagementsystem.ui.user.view.ItemGroup
         android:id="@+id/user_type"
         android:layout_width="match_parent"
