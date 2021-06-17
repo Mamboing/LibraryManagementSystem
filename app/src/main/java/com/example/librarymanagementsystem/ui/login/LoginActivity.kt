@@ -66,8 +66,10 @@ class LoginActivity : AppCompatActivity() {
             //Complete and destroy login activity once successful
             //finish()
 
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            if (loginResult.success != null) {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
         })
 
         username.afterTextChanged {

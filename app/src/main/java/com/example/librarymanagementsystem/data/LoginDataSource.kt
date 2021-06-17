@@ -35,7 +35,7 @@ class LoginDataSource {
         })
 
         // 防止因异步请求造成的dataCount数据冲突
-        SystemClock.sleep(1000)
+        SystemClock.sleep(2000)
 
         LogUtil.d("ResponseCount", dataCount)
         return if (dataCount != "E") {
